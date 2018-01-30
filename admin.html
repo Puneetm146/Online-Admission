@@ -1,0 +1,31 @@
+<html>
+	<head>
+	<script>
+		function validate()
+		{
+			var x = document.forms["myform"]["admin"].value;
+			var y = document.forms["myform"]["pass"].value;
+			if(x == "" || y==""){
+			alert("Credentials must be entered");
+        		return false;			
+				}
+
+			var usr = document.getElementById("username").value;
+			var pwd = document.getElementById("password").value;
+			if ( usr != "admin" && pwd != "admin123"){
+			alert("You are not authorized person!!");
+			return false;		
+			}
+		}	
+	</script>
+	</head>
+	<body bgcolor="#4dff4d">
+	<br><br><br><br><br><br>
+	<form name="myform" method="post" action="admin_portal.html" onsubmit="return validate()"><center>
+	<h1>ADMIN PORTAL</h1>
+	Admin: <input type="text" name="admin" id="username"><br><br>
+	Password: <input type="password" name="pass" id="password"><br><br>
+	<input type="submit" name="sub" value="Login"/></center><br><br>
+	</form>
+	</body>
+</html>

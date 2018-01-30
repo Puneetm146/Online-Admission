@@ -1,0 +1,33 @@
+<html>
+	<head>
+	<script>
+		function validate()
+		{
+			var x = document.forms["myform"]["usr"].value;
+			var y = document.forms["myform"]["pwd"].value;
+			if(x == "" || y==""){
+			alert("Credentials must be entered");
+        		return false;			
+				}
+
+			var usr = document.getElementById("username").value;
+			var pwd = document.getElementById("password").value;
+			if ( usr != "root" || pwd != "root"){		
+				alert("Username or password is wrong!");
+				return false;
+			}
+
+		}	
+	</script>
+	</head>
+	<body bgcolor="#4dff4d">
+	<br><br><br><br><br><br>
+	<center><h1><b>ONLINE ADMISSION PORTAL</b></h1>
+	</center><br><br>
+	<form name="myform" method="post" action="admission.html" onsubmit="return validate()"><center>
+	Username: <input type="text" name="usr" id="username"/><br><br>
+	Password: <input type="password" name="pwd" id="password"/><br><br>
+	<input type="submit" name="sub" value="Submit"/></center><br><br>
+	</form>
+	</body>
+</html>
